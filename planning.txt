@@ -1,0 +1,27 @@
+// book my show planning 
+
+// -> we need a reusable carousel 
+// hero carousel 
+// common  carousel 
+// caste and crew small carousel 
+
+// pages 
+// home pages 
+// movie pages
+// categories pages
+// auth pages
+// razorpay payment gateway 
+
+
+// paln -> how are we building it ?
+// layouts 
+// routes
+// pages
+// components
+
+
+// HOC 
+
+// higher order components
+
+
