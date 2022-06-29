@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { Children } from 'react';
 import {Route , Routes} from "react-router-dom" ;
 import DefaultHOC from './HOC/Default.HOC';
-import Temp from './components/temp';
-import DefaultLayout from './layouts/Default.layout';
+// Pages
+import HomePage from './pages/Home.page';
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-
-// function Name() {
-//   return <h1>Hello</h1>
-// };
 function App() {
   return (
-  <>
-
-   <Routes>
-   <Route exact path='/' element={<DefaultLayout/>} />
-   </Routes>
-   
-  
-    
+    <>
+      <DefaultHOC path="/" exact component={HomePage} />
     </>
   );
 }

@@ -1,21 +1,22 @@
 import React from "react";
-import {Route , Routes} from "react-router-dom" ;
+import { Route } from "react-router-dom";
+
+// Layout
 import DefaultLayout from "../layouts/Default.layout";
 
-const DefaultHOC = ({element:Element, ...rest}) => {  
-  return(
-      <>
-      <Routes>
-        <Route {...rest} 
-        Element={(props) =>(
+const DefaultHOC = ({ component: Component, ...rest }) => {
+  return (
+    <>
+      <Route
+        {...rest}
+        component={(props) => (
           <DefaultLayout>
-            <Element {...props}/>
+            <Component {...props} />
           </DefaultLayout>
-        )} />
-      </Routes>
-      </>
-    )
-  };
+        )}
+      />
+    </>
+  );
+};
 
-
-export default DefaultHOC ;
+export default DefaultHOC;
