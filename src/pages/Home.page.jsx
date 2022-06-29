@@ -5,14 +5,11 @@ import EntertainmentCardSlider from "../components/Entertainment/Entertainmentca
 const HomePage = () => {
  return (
     <>
-          <div className="flex flex-col gap-10">
-        <div className="container mx-auto px-4 ">
-          <h1 className="text-2xl font-bold text-gray-800 my-3">
-            The best of Entertainment
-          </h1>
-          <EntertainmentCardSlider />
-        </div>
-        </div>
+    <div className="container mx-auto px-24 py-4">
+      <h1 className="text-xl font-bold text-grey-800 my-3">The Best Of Entertainment</h1>
+    <EntertainmentCardSlider/>
+    </div>
+   
     </>
  );
 };
