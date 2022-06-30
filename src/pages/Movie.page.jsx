@@ -1,8 +1,10 @@
+// component
+import MovieHero from "../components/MovieHero/MovieHero.component";
 
 const Movie = () => {
   return (
     <>
-    <h1>hi</h1>
+        <MovieHero/>
     </>
   );
 };
