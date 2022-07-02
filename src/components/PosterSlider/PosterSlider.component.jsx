@@ -6,7 +6,7 @@ import PosterCarouselSettings from '../../config/PosterCarousel.config';
 
 const PosterSlider = (props) => {
 
-  const sliderConfig = props.config ? props.config : PosterCarouselSettings 
+  const sliderConfig = props.config ? props.config : PosterCarouselSettings  ;
   return (
     <>
       <div className='flex flex-col items-start'>

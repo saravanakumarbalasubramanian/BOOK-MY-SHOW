@@ -12,25 +12,25 @@ const Plays = () => {
                         <h2 className='text-2xl font-bold mb-4'>Plays in Bengaluru</h2>
                         <div className='flex flex-wrap '>
                             <div className='w-1/2 my-3 md:w-1/3 lg:w-3/12'>
-                                <Poster src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00332036-sunfdlbzyw-portrait.jpg"
+                                <Poster src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thor-love-and-thunder-et00302403-24-05-2022-12-00-43.jpg"
                                     title="Perumaale 2 & Charukesi"
                                     subtitle="Tamil ₹750"
                                 />
                             </div>
                             <div className='w-1/2 my-3 md:w-1/3 lg:w-3/12'>
-                                <Poster src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00332036-sunfdlbzyw-portrait.jpg"
+                                <Poster src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thor-love-and-thunder-et00302403-24-05-2022-12-00-43.jpg"
                                     title="Perumaale 2 & Charukesi"
                                     subtitle="Tamil ₹750"
                                 />
                             </div>
                             <div className='w-1/2 my-3 md:w-1/3 lg:w-3/12'>
-                                <Poster src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00332036-sunfdlbzyw-portrait.jpg"
+                                <Poster src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thor-love-and-thunder-et00302403-24-05-2022-12-00-43.jpg"
                                     title="Perumaale 2 & Charukesi"
                                     subtitle="Tamil ₹750"
                                 />
                             </div>
                             <div className='w-1/2 my-3 md:w-1/3 lg:w-3/12'>
-                                <Poster src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00332036-sunfdlbzyw-portrait.jpg"
+                                <Poster src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/thor-love-and-thunder-et00302403-24-05-2022-12-00-43.jpg"
                                     title="Perumaale 2 & Charukesi"
                                     subtitle="Tamil ₹750"
                                 />
@@ -44,7 +44,7 @@ const Plays = () => {
                         <h2>Filters</h2>
                         <div>
                             <PlaysFilters title="Date" tags={["Today" , "Tomorrow" , "this Weekend"]}/>
-                            <PlaysFilters title="Lamguage" tags={["Tamil" , "Telegu" , "English"]}/>
+                            <PlaysFilters title="Language" tags={["Tamil" , "Telegu" , "English"]}/>
                             <PlaysFilters title="Date" tags={["Today" , "Tomorrow" , "this Weekend"]}/>
                         </div>
                     </div>

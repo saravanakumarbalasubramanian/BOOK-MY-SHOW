@@ -1,12 +1,26 @@
-import React from "react";
+import React , { useState , useEffect  } from "react";
 import HeroSlider from "react-slick";
+import axios from "axios";
+
 // component
 import { NextArrow , PrevArrow } from "./Arrows.component"; 
 
 
 const HeroCarousel = () => {
 
-    const settingsLG = {
+     const [images , setImages] = useState([]);
+     
+     useEffect(() => {
+        const requestNowPlayingMovies = async () => {
+                const getImages = await axios.get("/movie/now_playing");
+                setImages(getImages.data.results);
+        };
+        requestNowPlayingMovies();
+     },[]);
+
+    
+    
+     const settingsLG = {
         arrow: true,
         autoplay: true,
         centerMode: true,
@@ -17,6 +31,7 @@ const HeroCarousel = () => {
         nextArrow:<NextArrow/>,
         prevArrow:<PrevArrow/>,
     };
+
     const settings = {
         arrows: true,
         infinite: true,
@@ -27,30 +42,23 @@ const HeroCarousel = () => {
         prevArrow:<PrevArrow/>,
     };
 
-    const images = [
-        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-        "https://images.unsplash.com/photo-1656182757345-7f84841c9e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "https://images.unsplash.com/photo-1656290669371-4df511cc7de8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "https://images.unsplash.com/photo-1656234802320-c5f1dc8e3a05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=896&q=80",
-        "https://images.unsplash.com/photo-1655916028066-f7a8f475df93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    ];
 
     return (
         <>
             <div className="lg:hidden">
                 <HeroSlider {...settings}>
-                    {images.map((images) => (
+                    {images.map((image) => (
                         <div className="w-full h-56 md:h-80 py-3  ">
-                            <img src={images} alt="testing" className="w-full h-full rounded-md" />
+                            <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full h-full rounded-md" />
                         </div>
                     ))}
                 </HeroSlider>
             </div>
             <div className=" hidden lg:block">
                 <HeroSlider {...settingsLG}>
-                    {images.map((images) => (
+                    {images.map((image) => (
                         <div className="w-full h-96 px-2 py-3 ">
-                            <img src={images} alt="testing" className="w-full h-full rounded-md" />
+                            <img src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full h-full rounded-md" />
                         </div>
                     ))}
                 </HeroSlider>
