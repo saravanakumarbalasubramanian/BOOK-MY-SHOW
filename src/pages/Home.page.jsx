@@ -3,8 +3,6 @@ import React , {useState, useEffect} from "react";
 
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
-// config
-import TempPosters from "../config/TempPosters.config"
 
 
 const HomePage = () => {
@@ -49,8 +47,8 @@ const HomePage = () => {
     <>
       <div className="flex flex-col gap-6">
 
-        <div className="container mx-auto px-24 py-4">
-          <h1 className="text-xl font-bold text-grey-800 my-3">The Best Of Entertainment</h1>
+        <div className="container mx-auto px-24 px-4 ">
+          <h1 className="text-2xl font-bold text-grey-800 my-3">The Best Of Entertainment</h1>
           <EntertainmentCardSlider />
         </div>
 
@@ -64,10 +62,12 @@ const HomePage = () => {
             </div>
             <PosterSlider images={popularMovies}
               title="Premieres"
-              subtitle="Brand New Release every friday" isDark/>
+              subtitle="Brand New Release every friday" isDark />
           </div>
         </div>
       </div>
+     
+     
       <div className="container mx-auto px-4 my-8">
         <PosterSlider images={topRatedMovies}
           title="Online Streaming events"
